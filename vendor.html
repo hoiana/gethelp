@@ -6,549 +6,184 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-	<style>
-	* {
-		-webkit-box-sizing: inherit;
-		-moz-box-sizing: inherit;
-		box-sizing: inherit
-	}
-	
-	html {
-		text-rendering: optimizeLegibility;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		font-size: 10px;
-		line-height: 1.5;
-		word-wrap: break-word;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		background: #eeeeee;
-		color: #333333
-	}
-	
-	body {
-		margin: 0
-	}
-	
-	.Button {
-		position: relative;
-		-webkit-tap-highlight-color: transparent;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		display: inline-block;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		font: inherit;
-		color: #fff;
-		background: #333;
-		padding: .5em 1em;
-		border: 0;
-		margin: 0;
-		-webkit-border-radius: .1875em;
-		-moz-border-radius: .1875em;
-		border-radius: .1875em
-	}
-	
-	.Button.Button-uses-org-theme-accent-color {
-		background-color: #9f8157
-	}
-	
-	.Button:hover {
-		-webkit-box-shadow: inset 0 0 0 999em rgba(255, 255, 255, .2);
-		-moz-box-shadow: inset 0 0 0 999em rgba(255, 255, 255, .2);
-		box-shadow: inset 0 0 0 999em rgba(255, 255, 255, .2)
-	}
-	
-	.Button:focus {
-		outline: 0
-	}
-	
-	.Button:focus::after {
-		content: "";
-		position: absolute;
-		z-index: 1;
-		top: 2px;
-		right: 2px;
-		bottom: 2px;
-		left: 2px;
-		-webkit-border-radius: .09375em;
-		-moz-border-radius: .09375em;
-		border-radius: .09375em;
-		-webkit-box-shadow: inset 0 0 0 1px #eee;
-		-moz-box-shadow: inset 0 0 0 1px #eee;
-		box-shadow: inset 0 0 0 1px #eee;
-		pointer-events: none;
-		-webkit-transition: opacity .3s ease-in-out;
-		-o-transition: opacity .3s ease-in-out;
-		-moz-transition: opacity .3s ease-in-out;
-		transition: opacity .3s ease-in-out
-	}
-	
-	.Button:focus:active::after {
-		opacity: 0
-	}
-	
-	.Button:hover:active {
-		-webkit-box-shadow: inset 0 0 0 999em rgba(0, 0, 0, .1);
-		-moz-box-shadow: inset 0 0 0 999em rgba(0, 0, 0, .1);
-		box-shadow: inset 0 0 0 999em rgba(0, 0, 0, .1)
-	}
-	
-	.Button.Button-is-juicy {
-		padding-top: .75em;
-		padding-bottom: .75em
-	}
-	
-	.Button.Button-is-block {
-		display: block;
-		width: 100%
-	}
-	
-	.Button.Button-is-half {
-		width: 49%;
-		background-color: #eee;
-		color:
-	}
-	
-	.Button.Button-is-auth {
-		background-color: #eee;
-		color: inherit;
-		text-align: left;
-		min-height: 55px;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-moz-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap
-	}
-	
-	.Button.Button-is-auth .Button-auth-service-icon {
-		position: absolute;
-		left: -3.1em;
-		width: 2.8em;
-		top: 0;
-		height: 100%;
-		padding: .5em;
-		color: #fff;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-moz-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-moz-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center
-	}
-	
-	.Button.Button-is-auth .Button-auth-service-icon>svg {
-		fill: currentColor;
-		display: block;
-		width: 25px;
-		height: 25px
-	}
-	
-	.Message {
-		display: block;
-		text-align: center;
-		padding: 1em;
-		overflow: hidden
-	}
-	
-	.Message:first-child {
-		padding: 1em;
-		-webkit-border-top-left-radius: .1875em;
-		-moz-border-radius-topleft: .1875em;
-		border-top-left-radius: .1875em;
-		-webkit-border-top-right-radius: .1875em;
-		-moz-border-radius-topright: .1875em;
-		border-top-right-radius: .1875em
-	}
-	
-	.Message:last-child {
-		-webkit-border-bottom-left-radius: .1875em;
-		-moz-border-radius-bottomleft: .1875em;
-		border-bottom-left-radius: .1875em;
-		-webkit-border-bottom-right-radius: .1875em;
-		-moz-border-radius-bottomright: .1875em;
-		border-bottom-right-radius: .1875em
-	}
-	
-	.Message.Message-is-warning {
-		background: #ffe4ce
-	}
-	
-	.Message.Message-is-success {
-		background: #a6eac9
-	}
-	
-	.RayID {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		padding: 0;
-		text-align: center;
-		background: #dfbd9f
-	}
-	
-	.RayID.RayID-Title {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 auto;
-		-moz-box-flex: 0;
-		-ms-flex: 0 0 auto;
-		flex: 0 0 auto;
-		padding: 1em;
-		display: inline-block
-	}
-	
-	.RayID.RayID-Value {
-		background: #e7c9af;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 auto;
-		-moz-box-flex: 1;
-		-ms-flex: 1 1 auto;
-		flex: 1 1 auto;
-		padding: 1em;
-		display: inline-block;
-		font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
-	}
-	
-	.StandardInput {
-		position: relative;
-		-webkit-tap-highlight-color: transparent;
-		-webkit-user-select: auto;
-		-moz-user-select: auto;
-		-ms-user-select: auto;
-		user-select: auto;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		display: inline-block;
-		text-align: left;
-		font: inherit;
-		color: ;
-		padding: .5em 1em;
-		border: 1px solid #cacaca;
-		margin: 0;
-		-webkit-border-radius: .1875em;
-		-moz-border-radius: .1875em;
-		border-radius: .1875em
-	}
-	
-	.StandardInput:-moz-placeholder,
-	.StandardInput::-webkit-input-placeholder {
-		font-family: inherit
-	}
-	
-	.StandardInput:focus {
-		outline: 0;
-		border-color: #777
-	}
-	
-	.StandardInput-is-block {
-		display: block;
-		width: 100%
-	}
-	
-	.StandardInput.StandardInput-is-code {
-		font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
-	}
-	
-	.StandardInput.StandardInput-is-entry-code {
-		font-size: 20px;
-		text-align: center
-	}
-	
-	.OrgAvatarLink {
-		display: block;
-		text-decoration: none;
-		color: inherit;
-		padding: 1.5em;
-		margin: -1.5em
-	}
-	
-	.OrgAvatarLink-logo {
-		display: block;
-		margin: 0 auto;
-		text-align: center
-	}
-	
-	.OrgAvatarLink-logo>svg {
-		height: 100%;
-		width: 100%;
-		display: block
-	}
-	
-	.OrgAvatarLink-title {
-		text-align: center
-	}
-	
-	.App-name {
-		text-align: center;
-		font-size: 1.25em
-	}
-	
-	.Surface {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		min-height: 100vh;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-flow: column;
-		-moz-box-orient: vertical;
-		-moz-box-direction: normal;
-		-ms-flex-flow: column;
-		flex-flow: column;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		-moz-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-moz-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center
-	}
-	
-	.AuthBox {
-		width: 70%;
-		max-width: 100%;
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
-		font-size: 1.4em;
-		background: #fff;
-		-webkit-border-radius: .5em;
-		-moz-border-radius: .5em;
-		border-radius: .5em;
-		-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
-		-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, .15)
-	}
-	
-	.AuthBox .AuthBoxRow--name {
-		text-transform: capitalize;
-		font-size: 15px;
-		white-space: nowrap;
-		overflow: hidden;
-		-o-text-overflow: ellipsis;
-		text-overflow: ellipsis;
-		width: 100%;
-		display: block
-	}
-	
-	.AuthBox .AuthBoxRow--connector-name {
-		font-size: 13px;
-		color: #757575
-	}
-	
-	.AuthBox-error-box-footer {
-		-webkit-border-radius: 0 0 .5em .5em;
-		-moz-border-radius: 0 0 .5em .5em;
-		border-radius: 0 0 .5em .5em;
-		background: rgba(0, 0, 0, .03);
-		border-top: 1px solid rgba(0, 0, 0, .15)
-	}
-	
-	@media (max-width:28em) {
-		.Surface {
-			border-top: 3px solid;
-			background: #fff;
-			-webkit-box-pack: start;
-			-webkit-justify-content: flex-start;
-			-moz-box-pack: start;
-			-ms-flex-pack: start;
-			justify-content: flex-start
-		}
-		.AuthBox {
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
-			border-radius: 0;
-			margin-top: 0;
-			margin-bottom: 0;
-			-webkit-box-shadow: none;
-			-moz-box-shadow: none;
-			box-shadow: none;
-			width: 100%
-		}
-		.AuthBox-error-box-footer {
-			border: 0;
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
-			border-radius: 0;
-			margin-bottom: 2rem
-		}
-	}
-	
-	.AuthBox-body {
-		padding: 1.5em;
-		-webkit-border-radius: .5em;
-		-moz-border-radius: .5em;
-		border-radius: .5em
-	}
-	
-	.ErrorBlock {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex
-	}
-	
-	.ErrorBlock-icon {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: flex;
-		width: 2.25em;
-		height: 2.25em;
-		margin-right: 1.25em
-	}
-	
-	.ErrorBlock-body {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		-moz-box-flex: 1;
-		-ms-flex: 1;
-		flex: 1
-	}
-	
-	.ErrorBlock-icon>svg {
-		display: block;
-		height: 100%;
-		width: 100%
-	}
-	
-	.ErrorBlock-header-text {
-		font-size: 1.4em;
-		margin-bottom: 1em
-	}
-	
-	.JSONBlock {
-		display: block;
-		font-size: .9em;
-		margin: 0;
-		padding: 1.5em;
-		font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-		overflow-x: scroll;
-		-webkit-overflow-scrolling: touch;
-		color: rgba(0, 0, 0, .6)
-	}
-	
-	.AuthBox-spacer {
-		height: 2em
-	}
-	
-	.AuthBox-text:not(:last-child) {
-		margin-bottom: .5em
-	}
-	
-	.AuthServiceLogin .AuthServiceLogin-row {
-		padding-bottom: 10px;
-		border-bottom: 1px solid #eee
-	}
-	
-	.AuthServiceLogin .AuthServiceLogin-row:not(:last-child) {
-		margin-bottom: .5em
-	}
-	
-	.AuthServiceLogin .AuthServiceLogin-row:last-child {
-		border-bottom: 0
-	}
-	
-	.AuthServiceLogin .AuthServiceLogin-row.AuthServiceLogin-row-is-only {
-		font-size: 1.2em
-	}
-	
-	.AuthFormLogin .AuthFormLogin-row:not(:last-child) {
-		margin-bottom: .5em
-	}
-	
-	.BrandLogo {
-		width: 9em;
-		margin-left: auto;
-		margin-right: auto
-	}
-	
-	.BrandLogo.BrandLogo-is-functioning-as-page-footer {
-		margin-bottom: 1.75em
-	}
-	
-	.BrandLogo .BrandLogo-text-cloudflare {
-		fill: #404041
-	}
-	
-	.BrandLogo .BrandLogo-text-access {
-		fill: #808285
-	}
-	
-	@media (min-height:40em) and (min-width:50em) {
-		.AuthBox {
-			width: 80%;
-			margin-top: 2em;
-			margin-bottom: 2em;
-			font-size: 1.5em
-		}
-		.AuthBox-body {
-			padding: 2em
-		}
-	}
-	
-	@media (min-width:40em) {
-		.AuthBox.AuthBox-is-error-box {
-			width: 34em
-		}
-	}
-	
-	@media (min-width:64em) {
-		.AuthBox.AuthBox-is-error-box {
-			width: 54em
-		}
-	}
-	
-	@media (min-width:28em) {
-		.BrandLogo {
-			width: 13em
-		}
-		.BrandLogo.BrandLogo-is-dark-theme .BrandLogo-text-cloudflare {
-			fill: #fff
-		}
-		.BrandLogo.BrandLogo-is-dark-theme .BrandLogo-text-access {
-			fill: #fff;
-			fill-opacity: .7
-		}
-	}
-	
-	img {
-		max-height: 60vh
-	}
-	</style>
+			<style>
+			* {
+				-webkit-box-sizing: inherit;
+				-moz-box-sizing: inherit;
+				box-sizing: inherit
+			}
+			
+			html {
+				text-rendering: optimizeLegibility;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-size: 10px;
+				line-height: 1.5;
+				word-wrap: break-word;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				background: #eeeeee;
+				color: #333333
+			}
+			
+			body {
+				margin: 0
+			}
+			
+			.Surface {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: flex;
+				min-height: 100vh;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-webkit-flex-flow: column;
+				-moz-box-orient: vertical;
+				-moz-box-direction: normal;
+				-ms-flex-flow: column;
+				flex-flow: column;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				-moz-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				-moz-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center
+			}
+			
+			.AuthBox {
+				width: 70%;
+				max-width: 100%;
+				margin-bottom: 1.5em;
+				font-size: 1.4em;
+				background: #fff;
+				-webkit-border-radius: .5em;
+				-moz-border-radius: .5em;
+				border-radius: .5em;
+				-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
+				-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
+				box-shadow: 0 0 0 1px rgba(0, 0, 0, .15)
+			}
+			
+			@media (max-width:28em) {
+				.Surface {
+					border-top: 3px solid;
+					background: #fff;
+					-webkit-box-pack: start;
+					-webkit-justify-content: flex-start;
+					-moz-box-pack: start;
+					-ms-flex-pack: start;
+					justify-content: flex-start
+				}
+				.AuthBox {
+					-webkit-border-radius: 0;
+					-moz-border-radius: 0;
+					border-radius: 0;
+					margin-top: 0;
+					margin-bottom: 0;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					width: 100%
+				}
+			}
+			
+			.AuthBox-body {
+				padding: 1.5em;
+				-webkit-border-radius: .5em;
+				-moz-border-radius: .5em;
+				border-radius: .5em
+			}
+			
+			.AuthBox-spacer {
+				height: 2em
+			}
+			
+			.AuthBox-text:not(:last-child) {
+				margin-bottom: .5em
+			}
+			
+			.BrandLogo {
+				width: 9em;
+				margin-left: auto;
+				margin-right: auto
+			}
+			
+			.BrandLogo.BrandLogo-is-functioning-as-page-footer {
+				margin-bottom: 1.75em
+			}
+			
+			.BrandLogo-is-functioning-as-page-header {
+				margin: 1.75em;
+			}
+			
+			@media (min-height:40em) and (min-width:50em) {
+				.AuthBox {
+					width: 80%;
+					margin-bottom: 2em;
+					font-size: 1.5em
+				}
+				.AuthBox-body {
+					padding: 2em
+				}
+			
+				.screen-shot {
+					max-height: 60vh;
+					max-width: 50%;
+					padding: 10px
+				}
+			
+				.main-table td {
+					font-size: 1.4em;
+					border: 1px solid #dddddd;
+					padding: 10px;
+				}
+			}
+			
+			@media (min-width:28em) {
+				.BrandLogo {
+					width: 13em
+				}
+			}
+			
+			.screen-shot {
+				max-height: 60vh;
+				max-width: 100%;
+			}
+			
+			.main-table th {
+				font-size: 1.6em;
+				padding: 8px;
+				border: 1px solid #dddddd
+			}
+			
+			.main-table td {
+				font-size: 1.4em;
+				border: 1px solid #dddddd;
+				padding: 5px;
+			}
+			
+			.main-table td:nth-child(2n) {
+				text-align: center;
+			}
+			
+			.header-logo {
+				margin: auto;
+			}
+			.keywork {
+				font-weight: bold;
+			}
+			.one {font-size: 1.5em;}
+			.one ul {display: inline-block; list-style: none; padding:0;}
+			.one ul li ul li {width: 200px;}
+			.one ul ul {display: flex;float: left;}
+			
+		</style>
 	<!-- Xin Chao -->
 </head>
 
@@ -557,10 +192,21 @@
 		<div class="AuthBox">
 			<div class="AuthBox-body">
 				<h1><strong>Guide for access HOIANA VPN - Vendor</strong></h1>
+				<div class="one">
+					<ul>
+						<li>
+							<ul>
+								<li>&#8227; <a href="#Password" class="a_top_hypers">Change Password</a></li>
+								<li>&#8227; <a href="#vpn" class="a_top_hypers">VPN</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 				<br>
 				<hr>
+				<a id="Password">
 				<h2>1. Change your password</h2>
-				<table>
+				<table class='main-table'>
 					<colgroup>
 						<col span="1" style="width: 25%;">
 						<col span="1" style="width: 75%;">
@@ -577,7 +223,7 @@
 								<br> 2. Logon by using provided credential
 								<ul>
 									<li> Enter your <b>username</b>:
-										 <br> Eg: username = <b>shiji.yoong<b>
+										 <br> Eg: username = <b>shiji.yoong</b>
 									</li>
 									<li> Click <b>Next</b>
 									</li>
@@ -626,8 +272,9 @@
 				</table>
 				<br><br>
 				<hr>
+				<a id="vpn">
 				<h2>2. Login to VPN</h2>
-				<table>
+				<table class='main-table'>
 					<thead>
 						<tr>
 							<th>Step</th>
