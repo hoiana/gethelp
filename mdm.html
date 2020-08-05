@@ -118,8 +118,8 @@
 		margin-bottom: 1.75em
 	}
 	
-	.BrandLogo.BrandLogo-is-functioning-as-page-header {
-		margin-top: 1.75em
+	.BrandLogo-is-functioning-as-page-header {
+		margin: 1.75em;
 	}
 	
 	@media (min-height:40em) and (min-width:50em) {
@@ -131,6 +131,18 @@
 		.AuthBox-body {
 			padding: 2em
 		}
+	
+		.screen-shot {
+			max-height: 60vh;
+			max-width: 50%;
+			padding: 10px
+		}
+	
+		td {
+			font-size: 1.4em;
+			border: 1px solid #dddddd;
+			padding: 10px;
+		}
 	}
 	
 	@media (min-width:28em) {
@@ -139,9 +151,9 @@
 		}
 	}
 	
-	img {
+	.screen-shot {
 		max-height: 60vh;
-		padding: 10px
+		max-width: 100%;
 	}
 	
 	th {
@@ -153,11 +165,15 @@
 	td {
 		font-size: 1.4em;
 		border: 1px solid #dddddd;
-		padding: 10px;
+		padding: 5px;
 	}
 	
 	td:nth-child(2n) {
 		text-align: center;
+	}
+	
+	.header-logo {
+		margin: auto;
 	}
 	
 	</style>
@@ -167,8 +183,8 @@
 <body>
 	<div class="Surface">
 		
-		<div class="BrandLogo BrandLogo-is-functioning-as-page-header"> 
-			<img src="https://raw.githack.com/hoiana/gethelp/master/header-logo.png" alt="firework & hoiana"> 
+		<div class="BrandLogo-is-functioning-as-page-header"> 
+			<img class="header-logo" src="https://raw.githack.com/hoiana/gethelp/master/header-logo.png" alt="firework & hoiana"> 
 		</div>
 		<div class="AuthBox">
 			<div class="AuthBox-body">
@@ -197,16 +213,16 @@
 							<td> 1. Download Intelligent Hub Application from <a href="https://apps.apple.com/vn/app/intelligent-hub/id338761996">Apple Appstore</a>
 								<br> or scan the next QRCode with built-in Camera application
 							</td>
-							<td><img src="https://raw.githack.com/hoiana/gethelp/master/qr-code-ios.png"></td>
+							<td><img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/qr-code-ios.png"></td>
 						</tr>
 						<tr>
 							<td> 2. Open application <br> Enter your email to detect the organization</td>
-							<td> <img src="https://raw.githack.com/hoiana/gethelp/master/mdm01.png">
+							<td> <img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/mdm01.png">
 							</td>
 						</tr>
 						<tr>
 							<td> 3. Enter your password for login to Workspace One.<br> The password you usually use to login to corporate computer</td>
-							<td> <img src="https://raw.githack.com/hoiana/gethelp/master/mdm02.png">
+							<td> <img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/mdm02.png">
 							</td>
 						</tr>
 						<tr>
@@ -214,7 +230,7 @@
 							<br> Note: Some application was installed, example like Outlook will be asked for managed from this HUB
 							<br> You can check the next video for more information.
 							</td>
-							<td> <iframe width="560" height="315" src="https://www.youtube.com/embed/qOOvfsRkvGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<td> <iframe class="screen-shot" src="https://www.youtube.com/embed/qOOvfsRkvGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</td>
 						</tr>
 					</tbody>
@@ -239,23 +255,23 @@
 							<td> 1. Download Intelligent Hub Application from <a href="https://play.google.com/store/apps/details?id=com.airwatch.androidagent&hl=en_US">Play Store</a>
 								<br> or scan the next QRCode
 							</td>
-							<td><img src="https://raw.githack.com/hoiana/gethelp/master/qr-code-android.png"></td>
+							<td><img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/qr-code-android.png"></td>
 						</tr>
 						<tr>
 							<td> 2. Open application <br> Enter your email to detect the organization</td>
-							<td> <img src="https://raw.githack.com/hoiana/gethelp/master/mdm01.png">
+							<td> <img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/mdm01.png">
 							</td>
 						</tr>
 						<tr>
 							<td> 3. Enter your password for login to Workspace One.<br> The password you usually use to login to corporate computer</td>
-							<td> <img src="https://raw.githack.com/hoiana/gethelp/master/mdm02.png">
+							<td> <img class="screen-shot" src="https://raw.githack.com/hoiana/gethelp/master/mdm02.png">
 							</td>
 						</tr>
 						<tr>
 							<td> 4. Then all enterprise application will be installed automatically
 							<br> Note: Some application was installed, example like Outlook will be asked for managed from this HUB
 							</td>
-							<td> <iframe width="560" height="315" src="https://www.youtube.com/embed/PCQy39YgtrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<td> <iframe class="screen-shot" width="560" height="315" src="https://www.youtube.com/embed/PCQy39YgtrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</td>
 						</tr>
 					</tbody>
