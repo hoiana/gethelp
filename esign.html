@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Get Help ・ Electronic Signatures</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <style>
+        * {
+        				-webkit-box-sizing: inherit;
+        				-moz-box-sizing: inherit;
+        				box-sizing: inherit
+        			}
+        			
+        			html {
+        				text-rendering: optimizeLegibility;
+        				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        				font-size: 10px;
+        				line-height: 1.5;
+        				word-wrap: break-word;
+        				-webkit-box-sizing: border-box;
+        				-moz-box-sizing: border-box;
+        				box-sizing: border-box;
+        				background: #eeeeee;
+        				color: #333333
+        			}
+        			
+        			body {
+        				margin: 0
+        			}
+        			
+        			.Surface {
+        				display: -webkit-box;
+        				display: -webkit-flex;
+        				display: -moz-box;
+        				display: -ms-flexbox;
+        				display: flex;
+        				min-height: 100vh;
+        				-webkit-box-orient: vertical;
+        				-webkit-box-direction: normal;
+        				-webkit-flex-flow: column;
+        				-moz-box-orient: vertical;
+        				-moz-box-direction: normal;
+        				-ms-flex-flow: column;
+        				flex-flow: column;
+        				-webkit-box-align: center;
+        				-webkit-align-items: center;
+        				-moz-box-align: center;
+        				-ms-flex-align: center;
+        				align-items: center;
+        				-webkit-box-pack: center;
+        				-webkit-justify-content: center;
+        				-moz-box-pack: center;
+        				-ms-flex-pack: center;
+        				justify-content: center
+        			}
+        			
+        			.AuthBox {
+        				width: 70%;
+        				max-width: 100%;
+        				margin-bottom: 1.5em;
+        				font-size: 1.4em;
+        				background: #fff;
+        				-webkit-border-radius: .5em;
+        				-moz-border-radius: .5em;
+        				border-radius: .5em;
+        				-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
+        				-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
+        				box-shadow: 0 0 0 1px rgba(0, 0, 0, .15)
+        			}
+        			
+        			@media (max-width:28em) {
+        				.Surface {
+        					border-top: 3px solid;
+        					background: #fff;
+        					-webkit-box-pack: start;
+        					-webkit-justify-content: flex-start;
+        					-moz-box-pack: start;
+        					-ms-flex-pack: start;
+        					justify-content: flex-start
+        				}
+        				.AuthBox {
+        					-webkit-border-radius: 0;
+        					-moz-border-radius: 0;
+        					border-radius: 0;
+        					margin-top: 0;
+        					margin-bottom: 0;
+        					-webkit-box-shadow: none;
+        					-moz-box-shadow: none;
+        					box-shadow: none;
+        					width: 100%
+        				}
+        			}
+        			
+        			.AuthBox-body {
+        				padding: 1.5em;
+        				-webkit-border-radius: .5em;
+        				-moz-border-radius: .5em;
+        				border-radius: .5em
+        			}
+        			
+        			.AuthBox-spacer {
+        				height: 2em
+        			}
+        			
+        			.AuthBox-text:not(:last-child) {
+        				margin-bottom: .5em
+        			}
+        			
+        			.BrandLogo {
+        				width: 9em;
+        				margin-left: auto;
+        				margin-right: auto
+        			}
+        			
+        			.BrandLogo.BrandLogo-is-functioning-as-page-footer {
+        				margin-bottom: 1.75em
+        			}
+        			
+        			.BrandLogo-is-functioning-as-page-header {
+        				margin: 1.75em;
+        			}
+        			
+        			@media (min-height:40em) and (min-width:50em) {
+        				.AuthBox {
+        					width: 80%;
+        					margin-bottom: 2em;
+        					font-size: 1.5em
+        				}
+        				.AuthBox-body {
+        					padding: 2em
+        				}
+        			
+        				.screen-shot {
+        					max-height: 60vh;
+        					max-width: 50%;
+        					padding: 10px
+        				}
+        			
+        				.main-table td {
+        					font-size: 1.4em;
+        					border: 1px solid #dddddd;
+        					padding: 10px;
+        				}
+        			}
+        			
+        			@media (min-width:28em) {
+        				.BrandLogo {
+        					width: 13em
+        				}
+        			}
+        			
+        			.screen-shot {
+        				max-height: 60vh;
+        				max-width: 100%;
+        			}
+        			
+        			.main-table th {
+        				font-size: 1.6em;
+        				padding: 8px;
+        				border: 1px solid #dddddd
+        			}
+        			
+        			.main-table td {
+        				font-size: 1.4em;
+        				border: 1px solid #dddddd;
+        				padding: 5px;
+        			}
+        			
+        			.main-table td:nth-child(2n) {
+        				text-align: center;
+        			}
+        			
+        			.header-logo {
+        				margin: auto;
+        			}
+        			.keywork {
+        				font-weight: bold;
+        			}
+        			.one {font-size: 1.5em;}
+        			.one ul {display: inline-block; list-style: none; padding:0;}
+        			.one ul li ul li {width: 200px;}
+        			.one ul ul {display: flex;float: left;}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+            td {
+                border: 1px solid white;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="Surface">
+		<br><br>
+        <div class="BrandLogo-is-functioning-as-page-header">
+            <img class="header-logo" src="https://raw.githack.com/hoiana/gethelp/master/header-logo.png" alt="firework & hoiana">
+        </div>
+        <br>
+        <br>
+        <div class="AuthBox">
+            <div class="AuthBox-body">
+                <h1>
+						<strong>Guide for Electronic Signatures </strong>
+					</h1>
+                <div class="one">
+                    <ul>
+                        <li><a href="#pc" class="a_top_hypers">Laptop/PC (Adobe Acrobat Reader DC)</a>
+                            <br>
+                            <ul>
+                                <li>&#8227; <a href="#pc" class="a_top_hypers">Guideline</a></li>
+                                <li>&#8227; <a href="#pc2" class="a_top_hypers">Video Guideline</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#mobile" class="a_top_hypers">Mobile/Tablet (Adobe Fill & Sign)</a>
+                            <br>
+                            <ul>
+                                <li>&#8227; <a href="#mobile" class="a_top_hypers">Guideline</a></li>
+                                <li>&#8227; <a href="#mobile2" class="a_top_hypers">Video Guideline</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+<a id="pc">
+                <div class="pos" id="_100:467" style="top:467;left:100">
+                    <span id="_21.3" style="font-weight:bold; font-size:21.3px; color:#1f3863">
+						1. Laptop/PC (Adobe Acrobat Reader DC)
+					</span>
+                </div>
+                <div class="pos" id="_100:525" style="top:525;left:100">
+                    <span id="_18.7" style="font-weight:bold; font-size:18.7px; color:#2f5395">
+Guideline</span>
+                </div>
+                <div class="pos" id="_100:546" style="top:546;left:100">
+                    <span id="_14.7" style=" font-size:14.7px; color:#000000">
+To  sign  a  PDF  document,  you  can  type,  draw,  or  upload  an  image  of  your  handwritten signature. You can also add text, such as your name, company, title, or the date. When you save the document, the signature and text become part of the PDF.</span>
+                </div>
+                <div class="pos" id="_100:644" style="top:644;left:100">
+                    <span id="_15.2" style="font-weight:bold; font-size:15.2px; color:#000000">
+Step 1<span style="font-weight:normal"> : Open the PDF document that you want to sign with Adobe Acrobat Reader DC.</span></span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image001.png" height="300" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:1271" style="top:1271;left:100">
+                    <span id="_15.0" style="font-weight:bold; font-size:15.0px; color:#000000">
+Step 2<span style="font-weight:normal"> : Click the </span> Sign<span style="font-weight:normal"> icon.</span></span>
+                </div>
+                <div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image003.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:1722" style="top:1722;left:100">
+                    <span id="_15.0" style="font-weight:bold; font-size:15.0px; color:#000000">
+Step 3: <span style="font-weight:normal"> Choose </span> Add Signature.</span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image004.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:2184" style="top:2184;left:100">
+                    <span id="_15.0" style="font-weight:bold; font-size:15.0px; color:#000000">
+Step 4: <span style="font-weight:normal"> Create Signature and Apply.</span></span>
+                </div>
+                <div class="pos" id="_100:2441" style="top:2441;left:100">
+                    <span id="_15.0" style="font-weight:bold; font-size:15.0px; color:#000000">
+Option 1: Draw.<span style="font-weight:normal"> Draw your signature in the field using your mouse/trackpad. </span></span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image005.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:2876" style="top:2876;left:100">
+                    <span id="_15.0" style="font-weight:bold; font-size:15.0px; color:#000000">
+Option 2: Image.<span style="font-weight:normal"> Browse, select and upload an image of your signature.</span></span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image006.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:3277" style="top:3277;left:100">
+                    <span id="_15.0" style=" font-size:15.0px; color:#000000">
+Tick<span style="font-weight:bold"> Save Signature </span> box. When this box is selected, the added signature is saved in Adobe Acrobat Reader DC for reuse.</span>
+                </div>
+                <div class="pos" id="_99:3326" style="top:3326;left:99">
+                    <span id="_15.0" style=" font-size:15.0px; color:#000000">
+ </span>
+                </div>
+                <div class="pos" id="_100:3611" style="top:3611;left:100">
+                    <span id="_15.1" style=" font-size:15.1px; color:#000000">
+Click <span style="font-weight:bold"> Apply</span> , and then place the Signature in the PDF where required. Resize and move the signature by clicking on the Signature to select it.</span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image007.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:4080" style="top:4080;left:100">
+                    <span id="_15.1" style="font-weight:bold; font-size:15.1px; color:#000000">
+Step 5: <span style="font-weight:normal"> Save PDF to finalize the signed document.</span></span>
+                </div>
+				<div class="pos" id="_0:0" style="top:1170">
+                    <img name="_1170:827" src="./static/image008.png" width="70%" border="0" usemap="#Map">
+				</div>
+				<br>
+                <div class="pos" id="_100:4080" style="top:4080;left:100">
+                    <span id="_15.1" style="font-weight:bold; font-size:15.1px; color:#000000">
+Video Guideline</span>
+<a id="pc2">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/m7k6WM2jb8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				
+<br><hr><br>
+<a id="mobile">
+                <div class="pos" id="_100:467" style="top:467;left:100">
+                    <span id="_21.3" style="font-weight:bold; font-size:21.3px; color:#1f3863">
+						2. Mobile/Tablet (Adobe Fill & Sign)
+					</span>
+                </div>
+<table>
+<tr>
+<td width="50%>
+									<div class="pos" id="_100:644" style="top:644;left:100">
+										<span id="_15.2" style="font-weight:bold; font-size:15.2px; color:#000000">
+											iOS App<span style="font-weight:normal"> | Install Adobe Fill & Sign - Form Filler from iOS App Store.</span>
+										</span>
+									</div>
+</td>
+<td width="50%>
+									<div class="pos" id="_100:644" style="top:644;left:100">
+										<span id="_15.2" style="font-weight:bold; font-size:15.2px; color:#000000">
+											Android App<span style="font-weight:normal"> | Install Adobe Fill & Sign: Easy </span>
+										</span>
+									</div>
+
+</td>
+</tr>
+<tr>
+<td>
+									<div class="pos" id="_0:0" style="top:1170">
+										<img name="_1170:827" src="./static/image010.jpg" height="300" border="0" usemap="#Map">
+									</div>
+</td>
+<td>
+									<div class="pos" id="_0:0" style="top:1170">
+										<img name="_1170:827" src="./static/image011.jpg" height="300" border="0" usemap="#Map">
+									</div>
+</td>
+</tr>
+</table>
+				<br><br>
+<a id="mobile2">
+                <div class="pos" id="_100:4080" style="top:4080;left:100">
+                    <span id="_15.1" style="font-weight:bold; font-size:15.1px; color:#000000">
+Video Guideline</span>
+				<iframe width="100%" height="400" src="https://www.youtube.com/embed/9j_N6a4YBQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+
+
+            </div>
+        </div>
+        <div class="BrandLogo BrandLogo-is-functioning-as-page-footer">
+            <img src="https://rawcdn.githack.com/it-hoiana/help/924dc4c6eae1833970074695f2b4fc0ae4e53d9f/logo_hoiana1.svg" alt="firework & hoiana">
+        </div>
+    </div>
+</body>
+
+</html>
